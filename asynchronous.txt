@@ -1,0 +1,101 @@
+{
+  "weeklyartistchart": {
+    "artist": [
+      {
+        "@attr": {
+          "rank": "1"
+        },
+        "mbid": "63aa26c3-d59b-4da4-84ac-716b54f1ef4d",
+        "playcount": "7",
+        "name": "Tame Impala",
+        "url": "https://www.last.fm/music/Tame+Impala"
+      },
+      {
+        "@attr": {
+          "rank": "2"
+        },
+        "mbid": "46eb0fb7-9725-43af-97d7-6c717682a799",
+        "playcount": "7",
+        "name": "The Midnight",
+        "url": "https://www.last.fm/music/The+Midnight"
+      },
+      {
+        "@attr": {
+          "rank": "3"
+        },
+        "mbid": "376c6f79-53a5-4c69-9053-27f8f3e98c7b",
+        "playcount": "6",
+        "name": "Mild Orange",
+        "url": "https://www.last.fm/music/Mild+Orange"
+      },
+      {
+        "@attr": {
+          "rank": "4"
+        },
+        "mbid": "c8b03190-306c-4120-bb0b-6f2ebfc06ea9",
+        "playcount": "5",
+        "name": "The Weeknd",
+        "url": "https://www.last.fm/music/The+Weeknd"
+      },
+      {
+        "@attr": {
+          "rank": "5"
+        },
+        "mbid": "085bbb68-d9c5-4183-8a2a-f9f7dd53d9f3",
+        "playcount": "2",
+        "name": "Absofacto",
+        "url": "https://www.last.fm/music/Absofacto"
+      },
+      {
+        "@attr": {
+          "rank": "6"
+        },
+        "mbid": "61a57a2a-4c7f-4b41-8109-1070a9c32242",
+        "playcount": "2",
+        "name": "Novo Amor",
+        "url": "https://www.last.fm/music/Novo+Amor"
+      },
+      {
+        "@attr": {
+          "rank": "7"
+        },
+        "mbid": "a88596bf-479c-4b1a-a57f-a7275d89ca26",
+        "playcount": "2",
+        "name": "Spendtime Palace",
+        "url": "https://www.last.fm/music/Spendtime+Palace"
+      },
+      {
+        "@attr": {
+          "rank": "8"
+        },
+        "mbid": "",
+        "playcount": "2",
+        "name": "The 1-800",
+        "url": "https://www.last.fm/music/The+1-800"
+      },
+      {
+        "@attr": {
+          "rank": "9"
+        },
+        "mbid": "3452247c-719a-4a77-8d98-bf55becb449a",
+        "playcount": "2",
+        "name": "Timecop1983",
+        "url": "https://www.last.fm/music/Timecop1983"
+      },
+      {
+        "@attr": {
+          "rank": "10"
+        },
+        "mbid": "9fae44ec-b95c-4b0f-a0a6-f0008613eabf",
+        "playcount": "2",
+        "name": "Wallows",
+        "url": "https://www.last.fm/music/Wallows"
+      }
+    ],
+    "@attr": {
+      "user": "nar-d_d-awg",
+      "from": "1592740800",
+      "to": "1593345600"
+    }
+  }
+}
