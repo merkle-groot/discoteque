@@ -1,12 +1,10 @@
-import React,{useEffect,useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import { Spinner } from 'reactstrap';
-import "./IndividualArtist.css"
-import Web3 from 'web3';
+import "./AboutArtist.css"
 
-function IndividualArtist({match}){
-
-    //gets data from nodejs from mongodb
-    const getData=async()=>{
+function AboutArtist({match}){
+     //gets data from nodejs from mongodb
+     const getData=async()=>{
         const data = await fetch('http://localhost:5000/api/artists/'+match.params.id)
         const res = await data.json()
         setArtistData(res[0]);
@@ -14,6 +12,7 @@ function IndividualArtist({match}){
     }
 
     useEffect(()=>{
+        console.log(match)
         getData();
     },[])
 
@@ -24,10 +23,10 @@ function IndividualArtist({match}){
         return(
             <div className="container-ind">
                 <div>
-                    <h2>{artistData.name}</h2>
+                    <h3 className="heading">{artistData.name}</h3>
                 </div>
-                <div>
-                    <img src={artistData.img} style={{width:250,height:250}} alt="dp"/>
+                <div className="artist-image-div">
+                    <img className="artist-image" src={artistData.img} style={{width:250,height:250}} alt="dp"/>
                 </div>
                 <div>
                     <div className="container-dec">
@@ -59,6 +58,6 @@ function IndividualArtist({match}){
             </div>
         )
     }    
-}
 
-export default IndividualArtist;
+}
+export default AboutArtist;
