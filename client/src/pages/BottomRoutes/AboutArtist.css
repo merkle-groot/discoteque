@@ -1,6 +1,6 @@
 .container-ind{
     margin:0 auto;
-    max-width: 800px;
+    min-width: 800px;
     min-height: 800px;
     padding:20px 10px;
     display: flex;
