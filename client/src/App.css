@@ -1,20 +1,9 @@
+*{ 
+    margin:0;
+    padding:0;
+}
+
 .App{
-    text-align: center;
-}
-
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 10vh;
-    background: #121212;
-    color:white;
-}
-
-.nav-links{
-    width:100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
+  display:block;
+  height:100vh;
 }

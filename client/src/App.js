@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import Navy from "./pages/Nav";
 import About from "./pages/About";
 import AppNavbar from "./components/Navbar";
 import "./App.css";
@@ -15,15 +16,16 @@ function App() {
     return (
       <Router>
         <div className="App">
-          <AppNavbar/>
-          {/* <Nav/> */}
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/login" exact component={Login} />
-              <Route path="/dashboard" exact component={Dashboard}/>
-              <Route path="/about" exact component={About} />
-              <Route path="/artist/:id" component={IndividualArtist}/>
-            </Switch>  
+          <Navy/>
+            <div >
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/login" exact component={Login} />
+                <Route path="/dashboard" exact component={Dashboard}/>
+                <Route path="/about" exact component={About} />
+                <Route path="/artist/:id" component={IndividualArtist}/>
+              </Switch>  
+            </div>
         </div>  
       </Router>
       

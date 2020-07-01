@@ -9,13 +9,13 @@ contract Factory{
         owner = msg.sender;
     }
     
-    event contractCreated(string _mbid, address contractAddress);
+    event contractCreated(string artistName, address contractAddress);
     
-    function createTokens(uint _initialSupply, string calldata _name, string calldata _symbol, string calldata _mbid) external{
-        require(msg.sender == owner,"Not Authorized");
+    function createTokens(uint _initialSupply, string calldata _name, string calldata _symbol, string calldata artistName) external{
+        require(msg.sender == owner,"Unauthorized Access");
         newContract = new ERC20(_initialSupply,_name,_symbol);
-        artistToERC[_mbid] = address(newContract);
-        emit contractCreated(_mbid,artistToERC[_mbid]);
+        artistToERC[artistName] = address(newContract);
+        emit contractCreated(artistName,artistToERC[artistName]);
     }
 }
 

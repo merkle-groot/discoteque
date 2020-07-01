@@ -4,6 +4,7 @@ import {
     CardTitle, CardSubtitle, Button, Spinner
   } from 'reactstrap';
   import {Link} from 'react-router-dom';
+import "./Dashboard.css";
   
 
 function Dashboard(){
@@ -24,22 +25,15 @@ function Dashboard(){
     if(artistData !== null){
         return(
         
-            <div>
+            <div className="dashboard">
                 {artistData.map(artist => (
-                <Card style={{width:300,height:300,textAlign:"center"}}>
-                    <CardImg  style={{width:150,height:150,textAlign:"center"}} src={artist.img} alt="Card image cap" />
-                    <CardBody>
-                        <CardTitle>{artist.name}</CardTitle>
-                        <CardSubtitle>{artist.lastfmId}</CardSubtitle>
-                        {/* <CardText>{artist.desc}</CardText> */}
-
-                        <Button to="/login" >
-                            <Link to={`/artist/${artist._id}`}>
-                            Enter Page
-                            </Link>
-                        </Button>
-                    </CardBody>
-                </Card>))}
+                    <Link to={`/artist/${artist._id}`}>
+                        <div className="card">
+                            <img alt="dp" src={artist.img} className="artistImage"/>
+                            <div className="artistName">{artist.name}</div>
+                        </div>
+                    </Link>
+                ))}
             </div>
         )
     } 

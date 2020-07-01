@@ -1,0 +1,36 @@
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    border: 1px solid #cccccc !important;
+    border-radius: 1px !important;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    margin:20px;
+    width:300px;
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artistName{
+    font-family: 'Roboto', sans-serif;
+    padding-top: 30px;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #121212;
+}
+
+.artistImage{
+    width: 150px;
+    height: 150px;  
+    border-radius: 10px;
+    border-width: 5px;
+}
