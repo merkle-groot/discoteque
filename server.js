@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const intro = require("./routes/api/introRoute");
 const artists = require("./routes/api/artistRoute");
+const points = require("./routes/api/pointsRoute");
+const login = require("./routes/api/loginRoute");
 var cors = require('cors');
 
 
@@ -28,11 +30,8 @@ mongoose.connect(db,{
 // use routes
 app.use("/api/intro",intro);
 app.use("/api/artists",artists);
-
-// result
-// app.get("/result", (req,res)=>{
-//     console.log(res.json());
-// })
+app.use("/api/points",points);
+// app.use("/api/login",login);
 
 // running on port
 const port = process.env.PORT || 5000;

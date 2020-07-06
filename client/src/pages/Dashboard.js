@@ -1,8 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import {
-    Card, CardImg, CardBody,
-    CardTitle, CardSubtitle, Button, Spinner
-  } from 'reactstrap';
+import { Spinner} from 'reactstrap';
   import {Link} from 'react-router-dom';
 import "./Dashboard.css";
   

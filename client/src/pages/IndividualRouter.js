@@ -15,8 +15,8 @@ function IndividualRouter({match}){
                 <div className="ind-router">
                     <nav className="left-bar">
                         <div className="nav-links">
-                            <ul>
-                                <Link to={`/artist/${match.params.id}/info`} className="nav-ind">
+                            <ul style={{listStyle: "katakana"}}>
+                                <Link to={`/artist/${match.params.id}/info`} className="nav-ind" >
                                     <li>ArtistInfo</li>
                                 </Link>
                                 

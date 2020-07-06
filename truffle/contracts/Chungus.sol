@@ -1,30 +1,9 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.16;
 
-contract Factory{
-    ERC20 newContract;
-    mapping (string => address) public artistToERC;
-    address public owner;
-    
-    constructor() public{
-        owner = msg.sender;
-    }
-    
-    event contractCreated(string artistName, address contractAddress);
-    
-    function createTokens(uint _initialSupply, string calldata _name, string calldata _symbol, string calldata artistName) external{
-        require(msg.sender == owner,"Unauthorized Access");
-        newContract = new ERC20(_initialSupply,_name,_symbol);
-        artistToERC[artistName] = address(newContract);
-        emit contractCreated(artistName,artistToERC[artistName]);
-    }
-}
-
-
-
-
-contract ERC20{
-    string  public name = "";
-    string  public symbol = "";
+contract Chungus{
+    string  public name = "Chungus Token";
+    string  public symbol = "CNGS";
+    string  public standard = "Chungus Token v1.0";
     uint256 public totalSupply;
     uint8 public decimals;
 
@@ -43,9 +22,7 @@ contract ERC20{
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
-    constructor (uint256 _initialSupply, string memory _name, string memory _symbol) public {
-        name = _name;
-        symbol = _symbol;
+    constructor (uint256 _initialSupply) public {
         balanceOf[msg.sender] = _initialSupply;
         totalSupply = _initialSupply;
         decimals = 2;

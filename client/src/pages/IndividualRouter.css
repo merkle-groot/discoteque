@@ -9,8 +9,27 @@
 .left-bar{
     min-width: 400px;
     height: 800px;
+    margin-right: 30px;
 }
 
 /* .right-bar{
     
 } */
+
+.nav-links{
+    width:50h;
+    border: 1px double #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-ind{
+    margin: 10px 30px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #121212;
+}

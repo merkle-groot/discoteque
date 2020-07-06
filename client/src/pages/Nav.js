@@ -5,9 +5,9 @@ import "./Nav.css";
 
 function Nav(){
 
-    const navStyle={
-        color:"#ffffff",
-    }
+    // const navStyle={
+    //     color:"#ffffff",
+    // }
     
     return(
         <nav>

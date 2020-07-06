@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 .container-ind{
     margin:0 auto;
     min-width: 800px;
@@ -10,6 +12,56 @@
     border: 1px solid #121212;
 }
 
+
+.engage{
+    min-height: 1500px;
+    min-width: 1000px;
+}
+
+.bars{
+    /* padding-top: 50px; */
+    width: 600px;
+    height: 600px;
+}
+
+.poll-text{
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+}
+
+.poll-question{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    letter-spacing: 0.1em;
+
+}    
+
+
+.poll-footer{
+    display: flex;
+}
+
+.poll-button{
+    flex: 1;
+    margin-left: auto;
+}
+
+.poll-count{
+    flex: 10;
+    font-size: 25px;
+    font-weight: 100 !important;
+    font-family: 'Raleway', sans-serif;
+}
+
+.poll-ind{
+    padding:20px;
+    /* display: flex; */
+}
 /* .artist-overview{
     font-family: 'Roboto', sans-serif;
 } */
@@ -39,4 +91,10 @@
     margin:2px;
     
     border-radius: 0em;
+}
+
+.approve-count{
+    font-size: 25px;
+    font-weight: 100 !important;
+    font-family: 'Raleway', sans-serif;
 }
