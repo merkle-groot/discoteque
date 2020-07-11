@@ -31,7 +31,7 @@ mongoose.connect(db,{
 app.use("/api/intro",intro);
 app.use("/api/artists",artists);
 app.use("/api/points",points);
-// app.use("/api/login",login);
+app.use("/login",login);
 
 // running on port
 const port = process.env.PORT || 5000;

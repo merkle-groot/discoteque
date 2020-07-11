@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Component} from 'react';
 import "./AboutArtist.css";
 import voterContract from "../../abi/Voter.json";
-import ercContract from "../../abi/ChungusCoin.json";
+import ercContract from "../../abi/PeachPit.json";
 import { Progress, Button, FormGroup, Input, Label, Form } from 'reactstrap';
 import Web3 from "web3";
 
@@ -42,16 +42,16 @@ class Engage extends Component{
         console.log(accounts)
 
         // Network ID
-        const networkId = 3;
+        const networkId = 5;
 
         // Set Contract
         if(networkId) {
             console.log("reached here")
-            const voting = new web3.eth.Contract(voterContract,"0x70F9E0902611D1cdF076556bC440a9d436e84185");
+            const voting = new web3.eth.Contract(voterContract,"0x6Ad476E449BA9C5212ae852bA91Ee593F0A90888");
             this.setState({ voting })
             console.log(voting);
 
-            const erc = new web3.eth.Contract(ercContract,"0x9668196EF49e8104aCDF835E9fBc80eEdA2ef519");
+            const erc = new web3.eth.Contract(ercContract,"0xa11dAcA6c020c3b71ce4CE22823F2397341D3784");
             this.setState({ erc })
             console.log(erc);
         }
@@ -70,7 +70,7 @@ class Engage extends Component{
             choice:options
         })
 
-        let coins = await this.state.erc.methods.allowance(this.state.account,"0x70F9E0902611D1cdF076556bC440a9d436e84185").call();
+        let coins = await this.state.erc.methods.allowance(this.state.account,"0xa11dAcA6c020c3b71ce4CE22823F2397341D3784").call();
         this.setState({ usable:coins });
         console.log(this.state.choice);
     }
@@ -95,6 +95,10 @@ class Engage extends Component{
         await this.loadWeb3();
         await this.loadBlockchainData();
         await this.getData();
+
+        setInterval(() => {
+            this.getData();
+        }, 2000);
     
     }
 
@@ -183,7 +187,7 @@ class Engage extends Component{
                     </Form> 
                 </div>
 
-                <div className="approve-count">{this.state.usable} coins</div>
+                {/* <div className="approve-count">{this.state.usable} coins</div> */}
 
                 <div className="poll-question">
                    Where should we hold our next concert? :)
@@ -193,7 +197,7 @@ class Engage extends Component{
 
                     <div className="poll-ind">
                         <div className="poll-content">
-                            <div className="poll-text" >Toronto</div>
+                            <div className="poll-text" >Calgary</div>
                             <Progress animated value={this.state.choice[0]} />
                             <div className="poll-count">{this.state.choice[0]} votes</div>
                         </div>

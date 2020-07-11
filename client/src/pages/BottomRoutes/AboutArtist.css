@@ -2,7 +2,7 @@
 
 .container-ind{
     margin:0 auto;
-    min-width: 800px;
+    min-width: 1200px;
     min-height: 800px;
     padding:20px 10px;
     display: flex;
@@ -12,6 +12,10 @@
     border: 1px solid #121212;
 }
 
+.get-token{
+    min-width: 300px;
+    min-height: 300px;
+}
 
 .engage{
     min-height: 1500px;
@@ -78,6 +82,7 @@
 
 .heading {
     padding-bottom: 20px;
+    padding-top: 50px;
     letter-spacing: 0.1em;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;

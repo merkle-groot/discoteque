@@ -17,11 +17,15 @@
     "body-parser": "^1.19.0",
     "concurrently": "^5.2.0",
     "ethereumjs-tx": "^2.1.2",
+    "ethers": "^5.0.5",
     "express": "^4.17.1",
+    "md5": "^2.2.1",
     "mongoose": "^5.9.20",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.4",
     "react-router-dom": "^5.2.0",
-    "web3": "^1.2.9"
+    "sha3": "^2.1.2",
+    "web3": "^1.2.9",
+    "xml2js": "^0.4.23"
   }
 }

@@ -8,7 +8,7 @@ router.get("/",async(req,res)=>{
     let TopArtistWeeklyRank=0;
     let points;
     let Data = null;
-    let name = "Peach Pit"
+    let name = req.query.user;
     let jsonData = null;
     Data = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=nar-d_d-awg&api_key=d83142322b6ff9b66fb411b8cde07431&format=json&limit=10`);
     jsonData = await Data.json();

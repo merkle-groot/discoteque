@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import Authenticate from "./pages/Authenticate";
 import Navy from "./pages/Nav";
 import About from "./pages/About";
 import "./App.css";
@@ -18,6 +19,7 @@ function App() {
               <Switch>
                 <Route path="/dashboard" exact component={Dashboard}/>
                 <Route path="/login" exact component={Login} />
+                <Route path="/loginStepper/:user/:token"  component={Authenticate}/>
                 <Route path="/about" exact component={About} />
                 <Route path="/artist/:id" component={IndividualRouter}/>
               </Switch>  
