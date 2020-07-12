@@ -17,7 +17,7 @@ function Login (){
         >
             <Button color="danger" size="lg"
                 onClick={()=>
-                    window.open("http://www.last.fm/api/auth/?api_key=c0f9dd56d9162c4cc8ff1e8351596806","_blank")
+                    window.open("http://www.last.fm/api/auth/?api_key=c0f9dd56d9162c4cc8ff1e8351596806","_self")
                 }>
                 Login using last.fm
             </Button>

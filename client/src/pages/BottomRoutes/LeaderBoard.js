@@ -41,7 +41,7 @@ class LeaderBoard extends Component{
         // Set Contract
         if(networkId) {
             console.log("reached here");
-            const erc = new web3.eth.Contract(ercContract,"0x3b42daD169456903E9f2c0a638Cd4e8B9b876270");
+            const erc = new web3.eth.Contract(ercContract,"0x82cAa2CE04B4df6fBE29FD87df0Ba6Bd34f327EB");
             this.setState({ erc })
             console.log(erc);
         }

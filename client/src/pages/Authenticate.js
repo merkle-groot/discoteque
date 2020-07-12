@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Web3 from "web3";
-import {Button, FormGroup, Label, Form } from 'reactstrap';
+import {Button, FormGroup, Label, Form, Spinner } from 'reactstrap';
+import "./Auth.css"
 
 
 class Authenticate extends Component{
@@ -10,6 +11,8 @@ class Authenticate extends Component{
             user: props.match.params.user,
             token: props.match.params.token,
             account: '',
+            verifying: false,
+            transactionID:null,
         };
     }
 
@@ -17,18 +20,21 @@ class Authenticate extends Component{
         let result = await fetch(`http://localhost:5000/login/user/?user=${this.state.user}`);
         let token = await result.json();
 
-        // if(token === this.state.token){
+        if(token === this.state.token){
             console.log(token);
             console.log(this.state.token);
             alert("logged in");
+            this.setState({verifying:true});
             let rawTrans = await fetch(`http://localhost:5000/login/verify/?user=${this.state.user}&account=${this.state.account}`);
             let rawJson = await rawTrans.json();
+            this.setState({transactionID:rawJson, verifying:false});
+
             console.log(rawJson);
-            const transaction = await Web3.eth.sendSignedTransaction(rawJson);
-            console.log(transaction);
-        // } else{
-        //     alert("Invalid User")
-        // }
+            alert("verified!")
+            
+        } else{
+            alert("Invalid User Or already verified!");
+        }
     }
 
     async loadWeb3 (){
@@ -59,13 +65,17 @@ class Authenticate extends Component{
 
     render(){
         return(
-            <Form inline>
-                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="auth" className="mr-sm-2">Approve Coins</Label>
-                    {/* <Input type="text" name="auth" id="auth" onChange={this.} placeholder="Your metamask address" /> */}
-                    <Button color = "success" onClick={this.auth}>Submit</Button>
-                </FormGroup>
-            </Form> 
+            <div className="verify">
+                <Form>
+                    <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                        {/* <Label for="auth" className="mr-sm-2">Verify</Label> */}
+                        {/* <Input type="text" name="auth" id="auth" onChange={this.} placeholder="Your metamask address" /> */}
+                        <Button size="lg" color = "success" onClick={this.auth}>Verify your MetaMask Address</Button>
+                    </FormGroup>
+                </Form> 
+                {this.state.verifying? <Spinner style={{width: '3rem', height: '3rem',marginRight:"15px"}}type="grow" color="primary" />:null}
+                {this.state.transactionID? <div onClick={()=>window.open(`https://ropsten.etherscan.io/tx/${this.state.transactionID}`,"_blank")}>{this.state.transactionID}</div> : null}
+            </div>
         )
     }    
 }
