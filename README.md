@@ -1,5 +1,6 @@
 # Discoteque
-
+### Done as part of Ethereum India Fellowship 2020.
+---
 ## Idea
 A platform for small-time artists to interact with their fans.
 
@@ -15,4 +16,20 @@ A platform for small-time artists to interact with their fans.
 
 ## Implementation
 * Front-end using ReactJS
-* Back-end using NodeJS & Ethereum
+* Back-end using NodeJS, MongoDB Atlas & Ethereum
+
+## Smart Contracts
+1. ERC20 Contract -
+    * Gorli - [0xa11dAcA6c020c3b71ce4CE22823F2397341D3784](https://goerli.etherscan.io/address/0xa11dAcA6c020c3b71ce4CE22823F2397341D3784#code)  
+2. Facory Contract
+    * Gorli - [0x482829ba989fbc368f9a89dff56cdf4036f39f28](https://goerli.etherscan.io/address/0x482829ba989fbc368f9a89dff56cdf4036f39f28#code)
+
+## Screenshots
+### Main Screen
+![screen1](./readme-src/1.png)
+### Artist Screen
+![screen2](./readme-src/2.png)
+### Artist Screen -> ArtistInfo
+![screen3](./readme-src/3.png)
+### Engage Screen
+![screen4](./readme-src/4.png)

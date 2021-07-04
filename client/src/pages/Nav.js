@@ -10,7 +10,7 @@ function Nav(){
     // }
     
     return(
-        <nav>
+        <nav>import logo from '../images/logo.png';
             <div className="logo-image">
                 <img clasName="logo" src={logo} alt="logo"/>
             </div>
